@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./boostrap/bootstrap.css">
+    <link rel="stylesheet" href="./styles/html.css">
+    <script src="./boostrap/bootstrap.js"></script>
+    <title>Guia Html</title>
+</head>
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-orangered p-2">
+            <a class="navbar-brand text-white" href="index.html">GUIA JESM CODE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""><img src="./resources/menu.png" alt=""></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./css.html">CSS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./bootstrap.html">BOOSTRAP</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./javascript.html">JAVASCRIPT</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./laravel.html">LARAVEL</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid text-white text-center py-3">
+        <h1>¿Qué es HTML?</h1>
+<p>HTML (HyperText Markup Language) es el lenguaje de marcado estándar utilizado para crear y estructurar el contenido de las páginas web. Con HTML, puedes definir la estructura y el significado de los elementos en una página, como títulos, párrafos, enlaces, imágenes y mucho más.</p>
+
+<h2 class="text-danger">HTML - Nivel Básico</h2>
+<div class="row g-1 py-3">
+  <h4>Estructura básica de un documento HTML</h4>
+  <img class="col-12 col-sm-6" src="./resorceshtml/estructura basica 1.png" alt="">
+  <div class="col-12 col-sm-6 text-start">
+    <p>Un documento HTML sigue una estructura básica que consta de varios elementos:</p>
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code>: Esta declaración define que el documento HTML está escrito en la última versión del estándar HTML.</li>
+      <li><code>&lt;html&gt;</code>: Este elemento engloba todo el contenido del documento HTML.</li>
+      <li><code>&lt;head&gt;</code>: Aquí se colocan metadatos e información del documento que no se muestra en el navegador, como el título de la página, enlaces a archivos CSS y scripts.</li>
+      <li><code>&lt;title&gt;</code>: Esta etiqueta se encuentra dentro del <code>&lt;head&gt;</code> y define el título de la página que se mostrará en la pestaña del navegador.</li>
+      <li><code>&lt;body&gt;</code>: Este elemento contiene todo el contenido visible de la página, como texto, imágenes, enlaces, etc.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row py-3 d-flex align-items-center justify-content-center">
+  <h4>Etiquetas de encabezado (<code>&lt;h1&gt;</code> al <code>&lt;h6&gt;</code>)</h4>
+  <div class="col-12 col-sm-4">
+    <img class="w-100" src="./resorceshtml/titulos.jpeg" alt="">
+  </div>
+  <div class="col-12 col-sm-4">
+    <p>Los encabezados de nivel 1 (<code>&lt;h1&gt;</code>) se utilizan para el título principal de la página. Se recomienda tener un solo <code>&lt;h1&gt;</code> en la página para enfocar la atención del lector. Los encabezados de nivel 2 al 6 se utilizan para subtítulos y secciones de menor importancia, donde <code>&lt;h2&gt;</code> es el siguiente en jerarquía de importancia y así sucesivamente.</p>
+  </div>
+</div>
+
+<div class="row py-3 d-flex justify-content-center align-items-center">
+  <h4>Párrafos y saltos de línea (<code>&lt;p&gt;</code>, <code>&lt;br&gt;</code>)</h4>
+  <div class="col-12 col-sm-4">
+    <img class="col-12" src="./resorceshtml/p br code.png" alt="">
+  </div> 
+  <div class="col-12 col-sm-4">
+    <img class="rounded" src="./resorceshtml/p br .png" alt="">
+  </div>
+  <div class="col-12 col-sm-4">
+    <p>La etiqueta <code>&lt;p&gt;</code> se utiliza para definir un párrafo de texto. Es ideal para separar y estructurar el contenido en bloques de texto coherentes. Cada párrafo se muestra en una línea nueva.</p>
+    <p>La etiqueta <code>&lt;br&gt;</code> se utiliza para insertar un salto de línea dentro de un párrafo o en lugares donde no se necesita un párrafo completo. No necesita una etiqueta de cierre y genera un salto de línea sin añadir un espacio en blanco adicional.</p>
+  </div>
+</div>
+
+<div class="row py-3 d-flex justify-content-center align-items-center">
+  <h4>Listas ordenadas y desordenadas (<code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code> )</h4>
+  <div class="col-12 col-sm-4">
+    <img src="./resorceshtml/olyul.png" alt="">
+  </div> 
+  <div class="col-12 col-sm-4">
+    <img class="rounded" src="./resorceshtml/olyulgoogle.png" alt="">
+  </div>
+  <div class="col-12 col-sm-4">
+    <p>La etiqueta <code>&lt;ol&gt;</code> se utiliza para crear listas ordenadas, donde cada elemento se numera secuencialmente.</p>
+    <p>La etiqueta <code>&lt;ul&gt;</code> se utiliza para crear listas desordenadas, donde cada elemento se muestra con viñetas o puntos.</p>
+    <p>Los elementos de la lista se definen con la etiqueta <code>&lt;li&gt;</code> dentro de <code>&lt;ol&gt;</code> o <code>&lt;ul&gt;</code>.</p>
+  </div>
+</div>
+
+<div class="d-flex align-items-center justify-content-center py-5">
+    <img class="col-12 col-sm-5" src="./resorceshtml/Phone maintenance-html.svg" alt="">
+</div>
+                <!-- <h1>¿Qué es HTML?</h1>
+                <p>HTML (HyperText Markup Language) es el lenguaje de marcado estándar utilizado para crear y estructurar el contenido de las páginas web.</p>
+                <h2 class="text-danger">HTML - Nivel Básico</h2>
+                <div class="row g-1 py-3">
+                <h4>Estructura básica de un documento HTML.</h4>
+                    <img class="col-12 col-sm-6" src="./resorceshtml/estructura basica 1.png" alt="">
+                    <div class="col-12 col-sm-6 text-start">
+                        <p><span>!DOCTYPE html</span> Esta declaración define que el documento HTML está escrito en la última versión del estándar HTML.</p>
+                        <p><span>html </span> Este elemento engloba todo el contenido del documento HTML.</p>
+                        <p><span>head </span>Aquí se coloca información del documento que no se muestra en el navegador, como el título de la página, enlaces a archivos CSS, metadatos y scripts.</p>
+                        <p><span>title </span>Esta etiqueta se encuentra dentro del head y define el título de la página que se mostrará en la pestaña del navegador.</p>
+                        <p><span>body </span>Este elemento contiene todo el contenido visible de la página, como texto, imágenes, enlaces, etc.</p>
+                    </div>
+                </div>
+                <div class="row py-3 d-flex align-items-center justify-content-center">
+                <h4>Etiquetas de encabezado (<span>h1</span> al <span>h6</span>).</h4>
+                    <div class="col-12 col-sm-4">
+                        <img class="w-100" src="./resorceshtml/titulos.jpeg" alt="">
+                        
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <p>El encabezado de nivel 1 <span>h1</span> se utiliza para el título principal de la página, es recomendado tener un solo <span>h1</span> en la pagina, mientras que los encabezados de nivel 2 al 6 se utilizan para subtítulos y secciones de menor importancia.</p>
+                    </div>
+                </div>
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Párrafos y saltos de línea ( <span>p</span> , <span>br</span> ).</h4>
+                    <div class="col-12 col-sm-4">
+                        <img class="col-12" src="./resorceshtml/p br code.png" alt="">
+                    </div> 
+                    <div class="col-12 col-sm-4">
+                        <img class="rounded" src="./resorceshtml/p br .png " alt="">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <p>La etiqueta <span>p</span> se utiliza para definir un párrafo de texto. Es ideal para separar y estructurar el contenido en bloques de texto coherentes. </p>
+                        <p>La etiqueta <span>br</span> es un salto de linea en la pagina</p>
+                    </div>
+                </div>
+                
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Listas ordenadas y desordenadas (<span>ol</span>, <span>ul</span> ).</h4>
+                    <div class="col-12 col-sm-4">
+                        <img src="./resorceshtml/olyul.png" alt="">
+                    </div> 
+                    <div class="col-12 col-sm-4">
+                        <img class="rounded" src="./resorceshtml/olyulgoogle.png" alt="">
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <p>La etiqueta <span>ol</span> se utiliza para listas ordenadas</p>
+                        <p>La etiqueta <span>ul</span> se utiliza para listas desordenadas</p>
+                    </div>
+                </div> -->
+<!-- 
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Enlaces (<code>&lt;a&gt;</code>).</h4>
+                    <p>Los enlaces se crean utilizando la etiqueta <code>&lt;a&gt;</code> en HTML. Permiten a los usuarios hacer clic en un texto o una imagen para navegar a otra página web o sección de la misma página.</p>
+                </div>
+                
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Imágenes (<code>&lt;img&gt;</code>).</h4>
+                    <p>Las imágenes se insertan en una página web utilizando la etiqueta <code>&lt;img&gt;</code> en HTML. Esta etiqueta permite especificar la ruta de la imagen, su tamaño y otros atributos.</p>
+                </div>
+                
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Tablas (<code>&lt;table&gt;</code>).</h4>
+                    <p>Las tablas se crean con la etiqueta <code>&lt;table&gt;</code> en HTML. Permiten organizar datos en filas y columnas, lo que facilita la presentación de información estructurada.</p>
+                </div>
+                
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Formularios (<code>&lt;form&gt;, &lt;input&gt;, &lt;textarea&gt;, etc.</code> ).</h4>
+                    <p>Los formularios se crean utilizando la etiqueta <code>&lt;form&gt;</code> en HTML. Permiten a los usuarios enviar datos al servidor web. Además del elemento <code>&lt;form&gt;</code>, se utilizan diferentes tipos de elementos de entrada como <code>&lt;input&gt;</code> y <code>&lt;textarea&gt;</code>.</p>
+                </div>
+                
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Elementos semánticos (header, nav, article, footer, etc.).</h4>
+                    <p>Los elementos semánticos en HTML son etiquetas que ayudan a estructurar y dar significado al contenido de una página web. Algunos ejemplos son <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code> y <code>&lt;footer&gt;</code>.</p>
+                </div>
+                
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Caracteres especiales y entidades HTML.</h4>
+                    <p>En HTML, algunos caracteres tienen un significado especial y no se pueden utilizar directamente en el código. En su lugar, se utilizan entidades HTML para representar estos caracteres especiales. Por ejemplo, <code>&amp;lt;</code> representa el símbolo "<", y <code>&amp;nbsp;</code> representa un espacio en blanco sin separación.</p>
+                </div> -->
+                
+
+                <!-- <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Enlaces ( <span>a</span> ).</h4>
+                    
+
+                </div>
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Imágenes ( <span>img</span> ).</h4>
+
+                </div>
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Tablas ( <span>table</span> ).</h4>
+
+                </div>
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Formularios ( <span>form, input, textarea, etc.</span>).</h4>
+
+                </div>
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Elementos semánticos (header, nav, article, footer, etc.).</h4>
+
+                </div>
+                <div class="row py-3 d-flex justify-content-center align-items-center">
+                    <h4>Caracteres especiales y entidades HTML.</h4>
+
+                </div> -->
+
+                <!-- <h2 class="text-danger">HTML - Nivel Intermedio</h2>
+                <h4>Elementos multimedia (audio y video).</h4>
+                <h4>Elementos de formulario avanzados (checkboxes, radio buttons, select, etc.).</h4>
+                <h4>Validación de formularios.</h4>
+                <h4>Uso de iframes.</h4>
+                <h4>Estructura de página avanzada (secciones, artículos, aside, etc.).</h4>
+                <h4>Elementos de lista adicionales (dl, dt, dd).</h4>
+                <h4>Elementos de encabezado adicionales (hgroup, header, footer, etc.).</h4>
+                <h4>Uso de metaetiquetas (meta) para SEO y optimización.</h4>
+                <h4>Accesibilidad y etiquetas WAI-ARIA.</h4>
+
+                <h2 class="text-danger">HTML - Nivel Avanzado</h2>
+                <h4>Uso de elementos HTML5 específicos (canvas, video, audio, etc.).</h4>
+                <h4>Uso de microdatos y esquemas para mejorar la estructura semántica de la página.</h4>
+                <h4>Uso de etiquetas de sección (article, section, aside, etc.) para organizar el contenido.</h4>
+                <h4>Uso de etiquetas de encabezado adicionales (header, nav, footer, etc.) para una estructura más clara.</h4>
+                <h4>Integración de mapas y geolocalización en la página.</h4>
+                <h4>Uso de etiquetas de importancia (mark, time, cite, etc.) para resaltar contenido específico.</h4>
+                <h4>Implementación de elementos de formularios más avanzados (date picker, range slider, etc.).</h4>
+                <h4>Uso de etiquetas de medios alternativos (picture, source) para imágenes responsivas.</h4>
+                <h4>Uso de atributos data-* para almacenar datos personalizados.</h4>
+                <h4>Optimización de rendimiento, como la carga diferida de imágenes o el uso de compresión de archivos.</h4>
+                 -->
+    </main>
+    
+</body>
+</html>

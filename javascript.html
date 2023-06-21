@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./boostrap/bootstrap.css">
+    <link rel="stylesheet" href="./styles/javascript.css">
+    <script src="./boostrap/bootstrap.js"></script>
+    <title>Guia JavaScript</title>
+</head>
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-warning p-2">
+            <a class="navbar-brand" href="index.html">GUIA JESM CODE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link" href="./html.html">HTML</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./css.html">CSS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./bootstrap.html">BOOSTRAP</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./laravel.html">LARAVEL</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid text-white text-center py-3">
+        <h1>¿Que es JavaScript?</h1>
+        <p>JavaScript es un lenguaje fundamental en el desarrollo web moderno, ya que brinda la capacidad de crear experiencias interactivas y dinámicas en los navegadores web.</p>
+        <div class="row gap-2 d-flex justify-content-center">
+        <h2 class="text-warning">Variable Declarations</h2>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>Var</h3>
+                <p>Es la forma más antigua de declarar variables en JavaScript. Puede tener alcance global o de función, lo que significa que la variable puede ser accedida desde cualquier parte del código dentro de la función o incluso desde fuera de ella si es global.</p>
+                <img class="rounded" src="./resourcesjavascript/var.png" alt="">
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>Let</h3>
+                <p>Fue introducido en ECMAScript 6 y permite declarar variables con alcance de bloque. Esto significa que la variable solo es accesible dentro del bloque donde se declaró.</p>
+                <img class="rounded" src="./resourcesjavascript/let.png" alt="">
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>Const</h3>
+                <p>También introducido en ECMAScript 6, se utiliza para declarar variables cuyo valor no cambiará a lo largo del programa. Al igual que let, tiene alcance de bloque. Una vez asignado, el valor de una constante no puede ser reasignado.</p>
+                <img class="rounded" src="./resourcesjavascript/const.png" alt="">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center gap-2">
+            <h2 class="text-warning">Hoisting</h2>
+            <p class="col-sm-8">El hoisting es un comportamiento en JavaScript donde las declaraciones de variables y funciones se mueven automáticamente al inicio del ámbito en el que se encuentran, antes de que se ejecute cualquier código. Esto significa que puedes utilizar una variable o función antes de declararla explícitamente en tu código.</p>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Hoisting de variables</h3>
+                <img class="rounded" src="./resourcesjavascript/hoistingvariable.png" alt="">
+                <p>En este caso, la variable x se declara en la primera línea, pero su valor no se ha asignado todavía. Al intentar imprimir su valor, obtendremos undefined. Esto se debe a que la declaración de la variable se ha movido al inicio del ámbito, pero su asignación ocurre en la línea siguiente.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Hoisting de funciones</h3>
+                <img class="rounded" src="./resourcesjavascript/hoistingfunciones.png" alt="">
+                <p>Aquí, la función sayHello se declara después de su invocación, pero aún así funciona correctamente. Esto se debe a que la declaración de la función se mueve al inicio del ámbito antes de que se ejecute el código.</p>
+            </div>
+        </div>
+        <h2 class="text-warning">Variable Naming Rules</h2>
+        <div class="d-flex flex-column align-items-center">
+            <ul class="text-start  col-12 col-sm-7 rounded">
+                <li>Los nombres de variables pueden contener letras (mayúsculas o minúsculas), dígitos y el símbolo de subrayado (_).Ejemplo: <code>nombre, edad, numero_de_cuenta.</code> </li>
+                <li>Los nombres de variables deben comenzar con una letra o el símbolo de subrayado (_). No pueden comenzar con un dígito.Ejemplo: <code>_variable, nombre, total</code></li>
+                <li>JavaScript distingue entre mayúsculas y minúsculas, por lo que <code>nombre</code>  y <code>Nombre</code>  son consideradas como variables diferentes.</li>
+                <li>Evita utilizar palabras reservadas de JavaScript como nombres de variables, ya que estas palabras tienen un significado especial en el lenguaje y no pueden ser utilizadas para otros propósitos.Ejemplo: <code>var, if, else, function</code></li>
+                <li>Se recomienda utilizar nombres descriptivos y significativos para las variables, de modo que puedan entenderse fácilmente su propósito y contenido.Ejemplo: <code>nombreCompleto, cantidadProductos, precioTotal</code> </li>
+                <li>Es una buena práctica utilizar el estilo de camel case para nombrar variables compuestas por varias palabras. En este estilo, la primera palabra comienza en minúscula y las siguientes palabras comienzan con mayúscula.Ejemplo: <code>nombreCompleto, cantidadProductos, precioTotal</code></li>
+            </ul>
+        </div>
+        
+        <div class="row d-flex justify-content-center gap-2">
+            <h2 class="text-warning">Variable Scopes</h2>
+            <p class="col-sm-8">El alcance de las variables en JavaScript se refiere a la accesibilidad y visibilidad de una variable dentro de un determinado contexto. Existen dos tipos de alcance de variables en JavaScript: alcance global y alcance local.</p>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Alcance Global</h3>
+                <img class="rounded" src="./resourcesjavascript/global.png" alt="">
+                <p>Las variables declaradas fuera de cualquier función tienen un alcance global, lo que significa que pueden ser accedidas y modificadas desde cualquier parte del código, tanto dentro de funciones como fuera de ellas.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Alcance Local</h3>
+                <img class="col-12 rounded" src="./resourcesjavascript/local.png" alt="">
+                <p>Las variables declaradas dentro de una función tienen un alcance local, lo que significa que solo pueden ser accedidas y utilizadas dentro de la función en la que se declararon. Estas variables no son visibles fuera de la función.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>Block scope</h3>
+                <img class="col-12 rounded" src="./resourcesjavascript/bloque.png" alt="">
+                <p>Las variables declaradas con let y const tienen un ámbito de bloque. Esto significa que solo están disponibles dentro del bloque en el que se declaran, como una declaración if, un bucle for o una función.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>Function scope</h3>
+                <img class="col-12 rounded" src="./resourcesjavascript/funcionscope.png" alt="">
+                <p>Las variables declaradas con var tienen un ámbito de función. Esto significa que están disponibles dentro de la función en la que se declaran, incluyendo cualquier bloque interno.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>Global scope</h3>
+                <img class="col-12 rounded" src="./resourcesjavascript/globalscope.png" alt="">
+                <p>Las variables declaradas fuera de cualquier función o bloque tienen un ámbito global. Esto significa que están disponibles en todo el código, incluyendo todas las funciones y bloques.</p>
+            </div>
+        </div>
+        
+        <div class="d-flex flex-column align-items-center p-2">
+        <h2 class="text-warning">Data Types</h2>
+            <h3>Primitive Types</h3>
+            <ul class="text-start  col-12 col-sm-7">
+                <li>Número (Number): Representa valores numéricos, ya sean enteros o de punto flotante. Se pueden realizar operaciones matemáticas con estos valores.</li>
+                <img src="./resourcesjavascript/number.png" alt="">
+                <li>Cadena de texto (String): Representa una secuencia de caracteres, como texto. Las cadenas de texto se encierran entre comillas simples ('') o comillas dobles ("").</li>
+                <img src="./resourcesjavascript/string.png" alt="">
+                <li>Booleano (Boolean): Representa un valor de verdad, que puede ser verdadero (true) o falso (false). Se utiliza para realizar comparaciones y controlar el flujo del programa.</li>
+                <img src="./resourcesjavascript/bolean.png" alt="">
+                <li>Nulo (Null): Representa la ausencia intencional de cualquier valor o objeto. Indica que una variable no tiene ningún valor asignado.</li>
+                <img src="./resourcesjavascript/null.png" alt="">
+                <li>Indefinido (Undefined): Representa una variable que ha sido declarada pero aún no tiene un valor asignado. También se obtiene cuando se accede a una variable que no existe.</li>
+                <img class="col-12 col-sm-7" src="./resourcesjavascript/undefined.png" alt="">
+                <li>Símbolo (Symbol): Introducido en ECMAScript 2015, representa un valor único e inmutable que se puede utilizar como identificador de propiedades de objetos.</li>
+                <img src="./resourcesjavascript/symbol.png" alt="">
+            </ul>
+        </div>
+        
+        <div class="row d-flex justify-content-center gap-2 p-2">
+            
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Object</h3>
+                <p>Un objeto se define utilizando llaves ({}) y consiste en un conjunto de pares clave-valor, donde la clave es una cadena de texto que actúa como el identificador de la propiedad, y el valor puede ser cualquier tipo de dato válido en JavaScript, incluyendo otros objetos.</p>
+                <img class="col-12" src="./resourcesjavascript/object.png" alt="">
+                <p>En el ejemplo anterior, se crea un objeto llamado persona con varias propiedades, como nombre, edad y esEstudiante. También se define un método saludar, que muestra un mensaje por consola utilizando la propiedad nombre del objeto.</p>
+            </div>
+
+            <div class="d-flex flex-column align-items-center col-12">
+            <h3>Built-in Objects</h3>
+                <ul class="text-start  col-12 col-sm-7 rounded py-2">
+                    <li>Object: Proporciona funcionalidades para crear y manipular objetos.</li>
+                    <img class="col-11 col-sm-7 rounded" src="./resourcesjavascript/objects.png" alt="">
+                    <li>Array: Ofrece funcionalidades para trabajar con arreglos de elementos.</li>
+                    <img class="col-11 col-sm-7 rounded" src="./resourcesjavascript/array.png" alt="">
+                    <li>String: Permite manipular y trabajar con cadenas de texto.</li>
+                    <img class="col-11 col-sm-7 rounded" src="./resourcesjavascript/stringobjec.png" alt="">
+                    <li>Math: Proporciona funciones matemáticas y constantes.</li>
+                    <img class="col-11 col-sm-7 rounded" src="./resourcesjavascript/math.png" alt="">
+                    <li>Date: Permite trabajar con fechas y horas.</li>
+                    <img class="col-11 col-sm-7 rounded" src="./resourcesjavascript/date.png" alt="">
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Object Prototype</h3>
+                <img class="col-12 col-sm-8 rounded" src="./resourcesjavascript/prototypr.png" alt="">
+                <p>En este ejemplo, el prototipo del constructor Persona se define mediante la propiedad prototype. Todos los objetos creados con new Persona() heredan automáticamente las propiedades y métodos de ese prototipo.El uso de prototipos es esencial en JavaScript para lograr la herencia y la reutilización de código de manera eficiente. Permite agregar métodos y propiedades comunes a un conjunto de objetos sin tener que duplicar el código en cada instancia individual.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Prototypal Inheritance</h3>
+                <img class="col-12 col-sm-7 rounded" src="./resourcesjavascript/herenciapretoty.png" alt="">
+                <p>En este ejemplo, el objeto animal actúa como el prototipo del objeto perro. Cuando intentas acceder a la propiedad tipo o al método describir() en perro, JavaScript busca en su prototipo (animal) y encuentra la propiedad y el método.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Typeof Operator</h3>
+                <img class="col-12 col-sm-7 rounded" src="./resourcesjavascript/typeoperator.png" alt="">
+                <p>El operador typeof se utiliza en JavaScript para determinar el tipo de dato de una expresión.</p>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center gap-2 p-2">
+        <h2 class="text-warning">Type Casting</h2>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Type Conversion vs Coercion</h3>
+                <img class="col-12 rounded" src="./resourcesjavascript/conversioncoerciuon.png" alt="">
+                <p>La conversión de tipos se refiere a la transformación automática de un tipo de dato a otro, mientras que la coerción se refiere a la transformación implícita de un tipo de dato a otro en expresiones.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Explicit Type Casting</h3>
+                <img class="rounded" src="./resourcesjavascript/explicit.png" alt="">
+                <p>El explicit type casting se refiere a la conversión de un tipo de dato a otro de forma explícita, utilizando funciones o operadores específicos.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Implicit Type Casting</h3>
+                <img class="rounded col-12" src="./resourcesjavascript/implicit.png" alt="">
+                <p>El implicit type casting se refiere a la conversión automática de un tipo de dato a otro sin necesidad de una instrucción explícita. Esto ocurre cuando se realizan operaciones entre diferentes tipos de datos.</p>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center gap-2 p-2">
+        <h2 class="text-warning">Data Structures</h2>
+            <div class="col-12 col-sm-7 rounded p-2">
+                <h3>Indexed Collections</h3>
+                <p>Las Indexed Collections son estructuras de datos que permiten almacenar múltiples elementos en una secuencia ordenada, donde cada elemento se identifica mediante un índice. En JavaScript, las Indexed Collections incluyen Arrays y Typed Arrays.</p>
+                </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Typed Arrays</h3>
+                <img class="rounded col-12" src="./resourcesjavascript/typedarray.png" alt="">
+                <p>Los Typed Arrays son arrays de datos numéricos que tienen un tipo de dato específico y un tamaño fijo. Los Typed Arrays proporcionan un mejor rendimiento y uso eficiente de memoria al trabajar con grandes conjuntos de datos numéricos en comparación con los Arrays normales.</p>
+                </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h3>Arrays</h3>
+                <img class="rounded col-12" src="./resourcesjavascript/arrays.png" alt="">
+                <p>Los Arrays son estructuras de datos en JavaScript que permiten almacenar múltiples elementos en una sola variable. Pueden contener cualquier tipo de dato y su tamaño puede cambiar dinámicamente.</p>
+            </div>
+            <h3>Keyed Collections</h3>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>Map</h4>
+                <img class="rounded col-12 col-sm-9" src="./resourcesjavascript/map.png" alt="">
+                <p>El Map es una estructura de datos en la que se pueden almacenar pares clave-valor. Las claves y los valores pueden ser de cualquier tipo de dato y están asociados de forma única. A diferencia de los objetos normales, los Mapas mantienen el orden de inserción de los elementos.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>WeakMap</h4>
+                <img class="rounded col-12 col-sm-9" src="./resourcesjavascript/weakmap.png" alt="">
+                <p>El WeakMap es similar al Map, pero solo acepta objetos como claves y tiene una característica especial: no previene la eliminación de claves y valores si no hay más referencias a ellos en el programa. Esto puede ser útil en ciertos escenarios donde se desea evitar fugas de memoria.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>Set</h4>
+                <img class="rounded col-12 col-sm-10" src="./resourcesjavascript/set.png" alt="">
+                <p>El Set es una colección de valores únicos, es decir, no permite duplicados. Puede contener cualquier tipo de dato y mantiene el orden de inserción de los elementos.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>WeakSet</h4>
+                <img class="rounded col-12 col-sm-8" src="./resourcesjavascript/weakset.png" alt="">
+                <p>El WeakSet es similar al Set, pero solo acepta objetos como elementos y tiene la misma característica especial que el WeakMap: no previene la eliminación de elementos si no hay más referencias a ellos en el programa.</p>
+            </div>
+
+
+            <div class="col-12 col-sm-8 rounded p-2">
+                <h4>Structured Data</h4>
+                <p>Los datos estructurados se refieren a la organización y formato de los datos de manera que sigan una estructura predefinida. Esto permite que los datos sean más legibles y fáciles de procesar por las aplicaciones. Los datos estructurados se utilizan comúnmente para representar información de manera organizada, como bases de datos, hojas de cálculo o formatos específicos como XML o JSON.</p>
+            </div>
+
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>JSON</h4>
+                <img class="rounded col-12 col-sm-9" src="./resourcesjavascript/json.png" alt="">
+                <p>JSON es un formato de intercambio de datos basado en texto que se utiliza ampliamente en aplicaciones web y servicios web. Es un formato ligero y fácil de leer y escribir tanto para humanos como para máquinas. JSON se utiliza para representar datos estructurados en forma de objetos y arreglos en JavaScript y otros lenguajes de programación.</p>
+            </div>
+        </div>
+        
+        <div class="row d-flex justify-content-center gap-2 p-2">
+            <h2 class="text-warning">Equality Comparisons</h2>
+            <h3>Value Comparison Operators</h3>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>==</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/==.png" alt="">
+                <p>El operador == compara dos valores permitiendo la conversión de tipos de datos. En otras palabras, intenta realizar una comparación igualando los valores después de aplicar conversiones implícitas si es necesario. Por ejemplo, "5" == 5 devuelve true ya que se realiza una conversión implícita de la cadena a un número antes de la comparación.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>===</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/===.png" alt="">
+                <p>El operador === compara dos valores sin realizar ninguna conversión de tipos. Compara tanto el valor como el tipo de dato de manera estricta. Por ejemplo, "5" === 5 devuelve false porque la cadena y el número tienen tipos de datos diferentes.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>Object.is</h3>
+                <img class="rounded col-12" src="./resourcesjavascript/object.is.png" alt="">
+                <p>El método Object.is compara dos valores de manera estricta, similar al operador ===. Sin embargo, tiene algunas diferencias sutiles en la comparación de valores especiales como NaN y -0 (cero negativo). Por ejemplo, Object.is(NaN, NaN) devuelve true y Object.is(-0, 0) devuelve false.</p>
+            </div>
+
+
+            
+            <div class="col-12 col-sm-9 rounded p-2">
+                <h3>Equality Algorithms</h3>
+                <p>Los algoritmos de igualdad en JavaScript determinan cómo se comparan y evalúan los valores en diferentes contextos. A continuación, te explicaré brevemente los conceptos de isLooselyEqual, isStrictlyEqual, SameValueZero y SameValue:</p>
+            </div>
+
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>isLooselyEqual</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/isLooselyEqual.png" alt="">
+                <p>Es un algoritmo utilizado en la especificación de ECMAScript para comparar valores en contextos de igualdad abstracta, como el operador ==. Este algoritmo realiza conversiones de tipo antes de realizar la comparación. Por ejemplo, "5" == 5 devuelve true, ya que se convierte la cadena en un número antes de la comparación.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>isStrictlyEqual</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/isStrictlyEqual.png" alt="">
+                <p>Es un algoritmo utilizado en la especificación de ECMAScript para comparar valores en contextos de igualdad estricta, como el operador ===. Este algoritmo no realiza conversiones de tipo y compara tanto el valor como el tipo de manera estricta. Por ejemplo, "5" === 5 devuelve false, ya que la cadena y el número tienen tipos de datos diferentes.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>SameValueZero</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/SameValueZero.png" alt="">
+                <p>Es un algoritmo utilizado en la especificación de ECMAScript para comparar valores numéricos. Este algoritmo se utiliza, por ejemplo, en los métodos Array.prototype.indexOf y Array.prototype.includes. Considera que NaN es igual a NaN y -0 (cero negativo) es igual a 0.</p>
+            </div>
+        
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>SameValue</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/SameValue.png" alt="">
+                <p>Es un algoritmo utilizado en la especificación de ECMAScript para comparar valores en contextos más generales. Este algoritmo es similar a SameValueZero, pero considera NaN como diferente a NaN y -0 (cero negativo) como diferente a 0.</p>
+            </div>
+        </div>
+        
+
+
+        <div class="row d-flex justify-content-center gap-2 p-2">
+            <h2 class="text-warning">Loops and Iterations</h2>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>for</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/for.png" alt="">
+                <p>El bucle for se utiliza para iterar sobre una secuencia de elementos un número específico de veces.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>do...while</h4>
+                <img class="rounded col-12 col-sm-5" src="./resourcesjavascript/dowhile.png" alt="">
+                <p>El bucle do...while se ejecuta al menos una vez y luego se repite siempre que se cumpla una condición específica.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>while</h3>
+                <img class="rounded col-12 col-sm-5" src="./resourcesjavascript/while.png" alt="">
+                <p>El bucle while se ejecuta siempre que se cumpla una condición específica.</p>
+            </div>
+            
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>for...in</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/forin.png" alt="">
+                <p>El bucle for...in se utiliza para iterar sobre las propiedades de un objeto.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>for...of</h4>
+                <img class="rounded col-12 col-sm-6" src="./resourcesjavascript/forof.png" alt="">
+                <p>El bucle for...of se utiliza para iterar sobre elementos iterables, como arrays o cadenas de texto.</p>
+            </div>
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>break y continue</h4>
+                <img class="rounded col-12 col-sm-8" src="./resourcesjavascript/breakcontinue.png" alt="">
+                <p>La declaración break se utiliza para salir de un bucle antes de que se complete, mientras que la declaración continue se utiliza para saltar a la siguiente iteración del bucle.</p>
+            </div>
+        
+            <div class="col-12 col-sm-5 bg-secondary rounded p-2">
+                <h4>Labeled</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/labeled.png" alt="">
+                <p>Las etiquetas se utilizan para identificar un bucle y permiten controlar el flujo de ejecución utilizando la declaración break o continue junto con la etiqueta.</p>
+            </div>
+        </div>
+
+
+
+        <div class="row d-flex justify-content-center gap-2 p-2">
+            <h2 class="text-warning">Control Flow</h2>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>if...else</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/ifelse.png" alt="">
+                <p>La declaración if...else se utiliza para ejecutar un bloque de código si se cumple una condición, y otro bloque de código si la condición no se cumple.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>ternary operator</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/ternary.png" alt="">
+                <p>El operador ternario es una forma concisa de escribir una declaración if...else. Se utiliza para asignar un valor o ejecutar un bloque de código basado en una condición.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h3>switch</h3>
+                <img class="rounded col-12" src="./resourcesjavascript/swith.png" alt="">
+                <p>La declaración switch se utiliza para ejecutar diferentes bloques de código según el valor de una expresión.</p>
+            </div>
+            
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>throw</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/throw.png" alt="">
+                <p>La declaración throw se utiliza para lanzar una excepción. Puedes lanzar cualquier valor como excepción, pero generalmente se utiliza un objeto Error para representar una excepción.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>try / catch / finally</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/trycatchfinally.png" alt="">
+                <p>El bloque try se utiliza para envolver el código que puede generar una excepción. El bloque catch se utiliza para capturar la excepción y manejarla. El bloque finally es opcional y se ejecuta siempre, independientemente de si se produce una excepción o no.</p>
+            </div>
+            <div class="col-12 col-sm-3 bg-secondary rounded p-2">
+                <h4>Error</h4>
+                <img class="rounded col-12" src="./resourcesjavascript/error.png" alt="">
+                <p>El objeto Error se utiliza para representar una excepción. Puedes personalizar el mensaje de la excepción y también acceder a la pila de llamadas.</p>
+            </div>
+        
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-center py-5">
+            <img class="col-12 col-sm-5" src="./resourcesjavascript/Phone maintenance-js.svg" alt="">
+        </div>
+
+
+
+<!-- 
+        <p>JavaScript - Nivel Básico:
+
+            Introducción a JavaScript: sintaxis básica y variables.
+            Tipos de datos: números, cadenas, booleanos, arrays y objetos.
+            Operadores: aritméticos, de asignación, de comparación y lógicos.
+            Estructuras de control: condicionales (if-else, switch) y bucles (for, while).
+            Funciones: declaración, parámetros, retorno y ámbito.
+            Manipulación del DOM básico: selección de elementos y manipulación de contenido.
+            Eventos: manejo de eventos del usuario (clics, cambios, etc.).
+            Uso de la consola para depuración y registro de información.
+
+            JavaScript - Nivel Intermedio:
+            
+            Objetos: creación, propiedades y métodos.
+            Funciones de orden superior: funciones como parámetros y retorno de funciones.
+            Programación asíncrona: callbacks, promesas y async/await.
+            Manipulación avanzada del DOM: creación de elementos, estilos y clases.
+            Trabajo con fechas y horarios.
+            Uso de AJAX y Fetch para realizar peticiones HTTP.
+            Almacenamiento de datos en el navegador (LocalStorage, SessionStorage).
+            Uso de librerías y frameworks populares (jQuery, Axios, etc.).
+            JavaScript - Nivel Avanzado:
+            
+            Programación orientada a objetos (POO) en JavaScript.
+            Patrones de diseño (MVC, Singleton, Observador, etc.).
+            Manejo avanzado de errores y excepciones.
+            Uso de módulos y modularización del código (CommonJS, ES Modules).
+            Manipulación de canvas y gráficos.
+            API del navegador: geolocalización, notificaciones, almacenamiento en IndexedDB, etc.
+            Uso de WebSockets y comunicación en tiempo real.
+            Optimización de rendimiento y manejo de memoria.
+            Pruebas unitarias y automatización de tareas.
+            Aplicaciones de una sola página (SPA) con frameworks como React, Angular o Vue.</p> -->
+    </main>
+</body>
+</html>
