@@ -1,6 +1,26 @@
 .bg-orangered{
     background-color: orangered;
 }
-span{
-    color: orangered;
+
+
+.ajustes{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 40px;
+  background-color: orangered;
+  border-radius: 50%;
+  border: solid orangered;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu{
+  display: block;
+  background-color: orangered;
+  height: 50vh;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 19px;
 }
